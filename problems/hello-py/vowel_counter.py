@@ -9,7 +9,7 @@ if len(args) < 2:
 	script = os.path.basename(args[0])
 	print('Usage:', script , 'STRING')
 	sys.exit(1)
-
+print(type(args))
 S = ''.join(args[1:])
 L = list(S)
 count = 0

@@ -17,12 +17,10 @@ def main():
 	if number == 1:
 		single = ''.join(names)
 		print('Hello to the ' + str(number) + ' of you: ' + single + '!')
-		sys.exit(0)
-	if number == 2:
+	elif number == 2:
 		double = ' and '.join(names)
 		print('Hello to the ' + str(number) + ' of you: ' + double + '!')
-		sys.exit(0)
-	if number > 2:
+	else:
 		group = ', '.join(names[:-1])
 		last_fella = ', and ' + names[-1]
 		print('Hello to the ' + str(number) + ' of you: ' + group + last_fella + "!")
