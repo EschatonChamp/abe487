@@ -4,10 +4,10 @@ import os
 
 args = sys.argv[1:]
 if len(args) < 1:
-	print('usage: Input sequence for GC content')
-	sys.exit(1)
-
+        print('usage: Input sequence for GC content')
+        sys.exit(1)
 Sequence = str(args[0])
+
 GC= "GC"
 count = 0
 for char in Sequence:
