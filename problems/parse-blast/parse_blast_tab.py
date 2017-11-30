@@ -26,20 +26,12 @@ def main():
 		record = dict(zip(fields, stats))
 		display = 'qseqid'
 		count = 0
-		final_product = [record['qseqid'], record['sseqid']]
-		if float(record['pident']) >= percent:
-			final_product.append(record['pident'])
-			count +=1		
-		if eval != None:
-			if float(record['evalue']) < eval:
-				final_product.append(record['evalue'])
-				count +=1
-		else:
-			final_product.append(record['evalue'])
-			count +=1
-		if count == 2:
-			yah = '\t'.join(final_product)
-			print(yah)
+		final_product = [record['qseqid'], record['sseqid'], record['pident'], record['evalue']]
+		for x in record:
+			if record['evalue'] <= eval and record['pident'] >= percent:
+				print(final_product)
+		
+
 
 #----------------------------
 if __name__ == '__main__':
